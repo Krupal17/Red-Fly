@@ -63,7 +63,7 @@ class YearAdapter1(
                 binding.monthRecyclerView.adapter = monthAdapter
             } else {
                 // Update existing adapter data
-                Log.e("FallLife", "bind: YearAdapter-->${yearData.year}")
+                d("FallLife", "bind: YearAdapter-->${yearData.year}")
                 monthAdapter.updateMonths(yearData.months)
             }
         }
@@ -101,7 +101,7 @@ class YearItem(val yearData: YearData) : AbstractItem<YearItem.ViewHolder>() {
 
         init {
             binding.monthRecyclerView.adapter = fastAdapter
-            Log.e("SoapLet", "getViewHolder:${yearData.year} ", )
+            d("SoapLet", "getViewHolder:${yearData.year} ", )
         }
 
         override fun bindView(item: YearItem, payloads: List<Any>) {

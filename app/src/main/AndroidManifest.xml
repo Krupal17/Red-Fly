@@ -2,9 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
 
     <application
+        android:name=".addemo.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +33,13 @@
         android:theme="@style/Theme.RedFly"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".messageDemo.activity.SmsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addemo.actvities.PermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addemo.actvities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,25 +48,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".addemo.actvities.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RedFly.NoActionBar">
+            android:theme="@style/Theme.RedFly.NoActionBar" />
 
-        </activity>
-<!--        <activity-->
-<!--            android:name=".MainActivity2"-->
-<!--            android:exported="true"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:theme="@style/Theme.RedFly.NoActionBar">-->
 
-<!--        </activity>-->
-<!--        <activity-->
-<!--            android:name=".MainActivity3"-->
-<!--            android:exported="true"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:theme="@style/Theme.RedFly.NoActionBar">-->
-<!--        </activity>-->
+            <!-- Required for being the default SMS app -->
+            <service android:name=".messageDemo.MySmsService"
+                android:exported="true"
+                android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+                <intent-filter>
+                    <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+                    <category android:name="android.intent.category.DEFAULT" />
+
+                    <data android:scheme="sms" />
+                    <data android:scheme="smsto" />
+                    <data android:scheme="mms" />
+                    <data android:scheme="mmsto" />
+                </intent-filter>
+            </service>
+
+            <receiver android:name=".messageDemo.MySmsReceiver"
+                android:permission="android.permission.BROADCAST_SMS"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="android.provider.Telephony.SMS_DELIVER" />
+                </intent-filter>
+            </receiver>
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" /> <!-- MobileAd Initialize enable for background -->
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true" /> <!-- Ad Loading Optimizer -->
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true" />
     </application>
 
 </manifest>

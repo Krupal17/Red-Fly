@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kspAndroid)
+
 }
 
 android {
@@ -37,6 +39,8 @@ android {
 
 dependencies {
 
+
+
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
@@ -46,12 +50,21 @@ dependencies {
     implementation libs.androidx.navigation.fragment.ktx
     implementation libs.androidx.navigation.ui.ktx
     implementation libs.androidx.activity
+    implementation libs.androidx.lifecycle.process
 
-    
+
     def lifecycle_version = "2.8.6"
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     implementation "com.mikepenz:fastadapter:5.7.0"
+
+    //Google Ad
+    implementation 'com.google.android.gms:play-services-ads:23.5.0'
+
+    implementation(libs.androidx.room.runtime)
+    ksp (libs.androidx.room.compiler)
+    implementation("androidx.room:room-ktx:2.6.1")
+
 }

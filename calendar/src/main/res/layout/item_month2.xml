@@ -1,0 +1,1192 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- First Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Second Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Third Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Fourth Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:id="@+id/lnrCol12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/monthTextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="M" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="W" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="T" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="F" />
+
+                    <TextView
+                        style="@style/DayOfWeekTextStyle"
+                        android:text="S" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/daysRecyclerView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="31"
+                    tools:listitem="@layout/item_day" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout><!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_marginHorizontal="8dp"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/lnrCol1"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/monthTextView1"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:text=""-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        &lt;!&ndash; Days of the Week Row (S, M, T, W, T, F, S) &ndash;&gt;-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="7dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/txtMonthName"-->
+    <!--            tools:ignore="MissingConstraints">-->
+
+    <!--            &lt;!&ndash; Days of the week (Sunday to Saturday) &ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="S"-->
+    <!--                android:textColor="@android:color/holo_red_dark"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="M"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="W"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="F"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="S"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+    <!--        <androidx.recyclerview.widget.RecyclerView
+                        android:nestedScrollingEnabled="false"-->
+    <!--            android:id="@+id/daysRecyclerView1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--            app:spanCount="7"-->
+    <!--            tools:itemCount="31"-->
+    <!--            tools:listitem="@layout/item_day" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/lnrCol2"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="5dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/lnrCol1">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/monthTextView2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:text=""-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        &lt;!&ndash; Days of the Week Row (S, M, T, W, T, F, S) &ndash;&gt;-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="7dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/txtMonthName"-->
+    <!--            tools:ignore="MissingConstraints">-->
+
+    <!--            &lt;!&ndash; Days of the week (Sunday to Saturday) &ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="S"-->
+    <!--                android:textColor="@android:color/holo_red_dark"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="M"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="W"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="F"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="S"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+    <!--        <androidx.recyclerview.widget.RecyclerView
+                        android:nestedScrollingEnabled="false"-->
+    <!--            android:id="@+id/daysRecyclerView2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--            app:spanCount="7"-->
+    <!--            tools:itemCount="23"-->
+    <!--            tools:listitem="@layout/item_day" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/lnrCol3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/lnrCol2">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/monthTextView3"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:text=""-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        &lt;!&ndash; Days of the Week Row (S, M, T, W, T, F, S) &ndash;&gt;-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="7dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/txtMonthName"-->
+    <!--            tools:ignore="MissingConstraints">-->
+
+    <!--            &lt;!&ndash; Days of the week (Sunday to Saturday) &ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="S"-->
+    <!--                android:textColor="@android:color/holo_red_dark"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="M"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="W"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="T"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="F"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="S"-->
+    <!--                tools:ignore="SmallSp"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="8sp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+    <!--        <androidx.recyclerview.widget.RecyclerView
+                        android:nestedScrollingEnabled="false"-->
+    <!--            android:id="@+id/daysRecyclerView3"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--            app:spanCount="7"-->
+    <!--            tools:itemCount="31"-->
+    <!--            tools:listitem="@layout/item_day" />-->
+    <!--    </LinearLayout>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

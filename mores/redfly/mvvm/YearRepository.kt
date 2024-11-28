@@ -25,7 +25,7 @@ object YearRepository {
 
     // Function to return the already loaded data
     fun getYearData(): List<YearData>? {
-        Log.e("BlackCoat", "getYearData: ${yearList?.size}", )
+        d("BlackCoat", "getYearData: ${yearList?.size}", )
         return yearList
     }
 
