@@ -223,7 +223,7 @@ class MapsActivity : AppCompatActivity() {
 //            if (isfromDetailScreen) {
             drawMarker(LatLng(lat, longt), true)
             //            }
-            GoogleDirection.withServerKey("AIzaSyBv6cUUv3hbIEDcG69F297b37KqrTjepSg")
+            GoogleDirection.withServerKey("API_KEY")
                 .from(LatLng(curr_latLng.latitude, curr_latLng!!.longitude))
                 .to(LatLng(lat, longt))
                 .avoid(AvoidType.FERRIES)
