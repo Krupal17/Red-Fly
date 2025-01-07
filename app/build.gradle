@@ -67,4 +67,6 @@ dependencies {
     ksp (libs.androidx.room.compiler)
     implementation("androidx.room:room-ktx:2.6.1")
 
+    implementation("com.github.natario1:cameraview:2.7.1")
+
 }

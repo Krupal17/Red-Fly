@@ -9,15 +9,9 @@ import android.os.CountDownTimer
 import android.os.Environment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
-import com.narine.kp.redfly.addemo.adHelp.redFlyAd.loadInterstitialAd
 import com.narine.kp.redfly.addemo.adHelp.redFlyAd.showInterstitialAd
 import com.narine.kp.redfly.addemo.utils.initialize
 import com.narine.kp.redfly.databinding.ActivitySplashBinding
-import com.narine.kp.redfly.messageDemo.DatabaseRepo
-import com.narine.kp.redfly.messageDemo.Manager.repoRef
-import com.narine.kp.redfly.messageDemo.activity.SmsActivity
-import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
 
@@ -30,24 +24,22 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
         initviews()
 
-        lifecycleScope.launch {
-            repoRef = DatabaseRepo()
-            repoRef.initDatabase(this@SplashActivity)
-        }
+
 
     }
 
     private fun initviews() {
-        loadInterstitialAd(this)
-        startCountdown{
+//        loadInterstitialAd(this)
+//        startCountdown{
 //            toAdDemo()
-        toSmsDemo()
-        }
+//        }
+        toCamera()
     }
 
-    private fun toSmsDemo() {
-        startActivity(Intent(this@SplashActivity, SmsActivity::class.java))
+    private fun toCamera() {
+        startActivity(Intent(this, MainActivity::class.java))
     }
+
 
     private fun toAdDemo() {
         checkAndRequestStoragePermission { permissionGranted ->

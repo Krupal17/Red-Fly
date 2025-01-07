@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto">
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -15,10 +16,18 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 
     <application
@@ -34,7 +43,25 @@
         tools:targetApi="31">
         <activity
             android:name=".messageDemo.activity.SmsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".addemo.actvities.MainActivity">
+            <!-- Required for being a default SMS app -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".addemo.actvities.PermissionActivity"
             android:exported="false" />
@@ -49,33 +76,36 @@
         </activity>
         <activity
             android:name=".addemo.actvities.MainActivity"
+            android:configChanges="orientation"
+            android:exported="true" />
+
+
+        <!-- Required for being the default SMS app -->
+        <service
+            android:name=".messageDemo.MySmsService"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.RedFly.NoActionBar" />
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </service>
 
 
-            <!-- Required for being the default SMS app -->
-            <service android:name=".messageDemo.MySmsService"
-                android:exported="true"
-                android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
-                <intent-filter>
-                    <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
-                    <category android:name="android.intent.category.DEFAULT" />
-
-                    <data android:scheme="sms" />
-                    <data android:scheme="smsto" />
-                    <data android:scheme="mms" />
-                    <data android:scheme="mmsto" />
-                </intent-filter>
-            </service>
-
-            <receiver android:name=".messageDemo.MySmsReceiver"
-                android:permission="android.permission.BROADCAST_SMS"
-                android:exported="true">
-                <intent-filter>
-                    <action android:name="android.provider.Telephony.SMS_DELIVER" />
-                </intent-filter>
-            </receiver>
+        <receiver
+            android:name=".messageDemo.MySmsReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
 
 
         <meta-data
