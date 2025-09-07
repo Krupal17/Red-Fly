@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.narine.kp.redfly'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.narine.kp.redfly"

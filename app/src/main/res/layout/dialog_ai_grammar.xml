@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dialog_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:backgroundTint="?attr/colorSurface"
+       app:contentPadding="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header with icon and title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_ai_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_ai_brain"
+                    android:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="AI Grammar Assistant"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+
+            <!-- Text box with shimmer and response -->
+            <FrameLayout
+                android:id="@+id/fl_text_container"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="24dp"
+                android:background="?attr/colorSurfaceVariant"
+                android:backgroundTint="?attr/colorSurfaceVariant"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="16dp"
+                android:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Full">
+
+                <!-- Shimmer placeholder -->
+                <LinearLayout
+                    android:id="@+id/shimmer_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shimmer_background" />
+
+                    <View
+                        android:layout_width="80%"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shimmer_background" />
+
+                    <View
+                        android:layout_width="60%"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shimmer_background" />
+
+                    <View
+                        android:layout_width="40%"
+                        android:layout_height="16dp"
+                        android:background="@drawable/shimmer_background" />
+                </LinearLayout>
+
+                <!-- Actual response text -->
+                <ScrollView
+                    android:id="@+id/scroll_response"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="ifContentScrolls"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_response"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4dp"
+                        android:text="AI generated response will appear here."
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp" />
+                </ScrollView>
+
+                <!-- Copy button bottom right -->
+                <ImageButton
+                    android:id="@+id/btn_copy"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Copy to clipboard"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_copy"
+                    android:visibility="gone"
+                    app:tint="?attr/colorPrimary" />
+            </FrameLayout>
+
+            <!-- Close button outside dialog bottom -->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_red_background"
+        android:contentDescription="Close dialog"
+        android:padding="12dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_card"
+        app:layout_constraintStart_toStartOf="@+id/dialog_card"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_card"
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
